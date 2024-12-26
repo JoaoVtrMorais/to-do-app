@@ -1,4 +1,4 @@
-// import { AddNewTask } from './components/AddNewTask';
+import { AddNewTask } from './components/AddNewTask';
 import { Header } from './components/Header';
 import './global.css';
 import styles from './App.module.css';
@@ -12,13 +12,12 @@ function App() {
 
       <main className={styles.content}>
 
-        {/* <AddNewTask /> */}
+        <AddNewTask />
 
         <Infos />
         
         <EmptyTasks />
         
-
       </main>
     </div>
   )
