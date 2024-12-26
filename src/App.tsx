@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import './global.css';
 import styles from './App.module.css';
 import { Infos } from './components/Infos';
+import { EmptyTasks } from './components/EmptyTasks';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         {/* <AddNewTask /> */}
 
         <Infos />
+        
+        <EmptyTasks />
         
 
       </main>
