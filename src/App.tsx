@@ -1,7 +1,8 @@
-import { AddNewTask } from './components/AddNewTask';
+// import { AddNewTask } from './components/AddNewTask';
 import { Header } from './components/Header';
 import './global.css';
 import styles from './App.module.css';
+import { Infos } from './components/Infos';
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
 
       <main className={styles.content}>
 
-        <AddNewTask />
+        {/* <AddNewTask /> */}
+
+        <Infos />
+        
 
       </main>
     </div>

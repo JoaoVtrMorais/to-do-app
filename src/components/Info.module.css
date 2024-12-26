@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.created {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.done {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+.counter {
+    background: var(--gray-400);
+    padding: 0.125rem .5rem;
+    font-size: 0.75rem;
+    border-radius: 100%;
+}
