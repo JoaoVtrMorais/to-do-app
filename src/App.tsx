@@ -4,6 +4,7 @@ import './global.css';
 import styles from './App.module.css';
 import { Infos } from './components/Infos';
 import { EmptyTasks } from './components/EmptyTasks';
+import { Task } from './components/Task';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         
         <EmptyTasks />
         
+        <Task text='Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' />
       </main>
     </div>
   )
