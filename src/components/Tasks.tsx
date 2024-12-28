@@ -1,17 +1,32 @@
-
 import { EmptyTasks } from "./EmptyTasks";
 import { Infos } from "./Infos";
 import { Task } from "./Task";
 import styles from "./Tasks.module.css";
 
-export function Tasks() {
+interface TasksProps {
+  data: string[];
+}
+
+export function Tasks({ data }: TasksProps) {
+
+  const hasData = data.length > 0;
+
   return (
     <main className={styles.content}>
-      <Infos />
+      <Infos data={data} />
 
-      <EmptyTasks />
-
-      <Task text="Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer." />
+      {
+        hasData ? (
+          <ul>
+            {data.map((task) => (
+              <Task key={task} text={task} />
+            ))}
+          </ul>
+        ) : (
+          <EmptyTasks />
+        )
+      }
+      
     </main>
   );
 }
