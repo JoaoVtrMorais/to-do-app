@@ -1,26 +1,17 @@
 import { AddNewTask } from './components/AddNewTask';
 import { Header } from './components/Header';
+import { Tasks } from './components/Tasks';
 import './global.css';
 import styles from './App.module.css';
-import { Infos } from './components/Infos';
-import { EmptyTasks } from './components/EmptyTasks';
-import { Task } from './components/Task';
 
 function App() {
   return (
-    <div>
+    <div className={styles.content}>
       <Header />
 
-      <main className={styles.content}>
+      <AddNewTask />
 
-        <AddNewTask />
-
-        <Infos />
-        
-        <EmptyTasks />
-        
-        <Task text='Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' />
-      </main>
+      <Tasks />
     </div>
   )
 }
