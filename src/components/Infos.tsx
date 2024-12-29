@@ -1,9 +1,10 @@
+import { TaskType } from "./AddNewTask";
 import { Info } from "./Info";
 
 import styles from "./Infos.module.css";
 
 interface InfosProps {
-    data: string[];
+    data: TaskType[];
 }
 
 export function Infos({ data }: InfosProps) {

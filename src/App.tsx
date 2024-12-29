@@ -1,4 +1,4 @@
-import { AddNewTask } from './components/AddNewTask';
+import { AddNewTask, TaskType } from './components/AddNewTask';
 import { Header } from './components/Header';
 import { Tasks } from './components/Tasks';
 import './global.css';
@@ -7,9 +7,9 @@ import { useState } from 'react';
 
 function App() {
 
-  const [data, setData] = useState<string[]>([])
+  const [data, setData] = useState<TaskType[]>([])
 
-  function collectData(dataCollected: string[]) {
+  function collectData(dataCollected: TaskType[]) {
     setData(dataCollected)
   }
 
