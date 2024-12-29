@@ -5,7 +5,8 @@
     flex-direction: row;
     gap: .5rem;
     width: 100%;
-    max-width: 46rem;
+    max-width: 46.5rem;
+    padding: 0 .5rem;
     margin-top: calc(0px - 1.5rem - 6px);
 }
 
