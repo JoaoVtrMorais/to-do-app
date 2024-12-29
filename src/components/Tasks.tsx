@@ -6,9 +6,11 @@ import styles from "./Tasks.module.css";
 
 interface TasksProps {
   data: TaskType[];
+  toggleTaskChecked: (id: number) => void;
+  onDeleteTask: (taskToDelete: number) => void;
 }
 
-export function Tasks({ data }: TasksProps) {
+export function Tasks({ data, toggleTaskChecked, onDeleteTask }: TasksProps) {
 
   const hasData = data.length > 0;
 
@@ -20,7 +22,14 @@ export function Tasks({ data }: TasksProps) {
         hasData ? (
           <ul>
             {data.map((task) => (
-              <Task key={task.id} text={task.content} />
+              <Task 
+                key={task.id}
+                id={task.id} 
+                content={task.content}
+                checked={task.checked}
+                onToggleChecked={() => toggleTaskChecked(task.id)}
+                onDeleteTask={onDeleteTask} 
+              />
             ))}
           </ul>
         ) : (
